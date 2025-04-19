@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Card Details</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container-fluid split-container">
+      <div class="row h-100">
+        <!-- Sol Bölüm (Kartlar) -->
+        <div class="col-md-4 left-side p-0">
+          <div class="position-relative h-100">
+            <!-- Ön Kart -->
+            <div class="card-front position-relative">
+              <img src="images/bg-card-front.png" alt="Credit Card Front" class="card-img">
+              <div class="card-overlay">
+                <img src="images/card-logo.svg" alt="Card Logo" class="card-logo">
+                <span class="card-number mt-md-0">0000 0000 0000 0000</span>
+                <div class="card-details">
+                  <span class="cardholder-name ms-3" id="card-owner">Fatih Pektaş</span>
+                  <span class="card-expiry me-3">00/00</span>
+                </div>
+              </div>
+            </div>
+            <!-- Arka Kart -->
+            <div class="card-back position-relative">
+              <img src="images/bg-card-back.png" alt="Credit Card Back" class="card-img">
+              <div class="card-overlay">
+                <span class="card-cvc mt-md-0 ">000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ Bölüm (Form ve Onay Mesajı) -->
+        <div class="col-md-8 right-side d-flex justify-content-center align-items-center">
+          <div class="w-75">
+
+            <!-- Form -->
+            <form action="#" class="credit-card-form">
+              <div class="mb-3">
+                <label for="cardholderName" class="form-label">CARDHOLDER NAME</label>
+                <input type="text" class="form-control" id="cardholderName" placeholder="örn. Fatih Pektaş" required>
+              </div>
+              <div class="mb-3">
+                <label for="cardNumber" class="form-label">CARD NUMBER</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="örn. 1234 5678 9123 0000" maxlength="19" required>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">EXP. DATE (MM/YY)</label>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <input type="text" class="form-control" id="expiryMonth" placeholder="MM" maxlength="2" required>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" class="form-control" id="expiryYear" placeholder="YY" maxlength="2" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cvc" class="form-label">CVC</label>
+                  <input type="text" class="form-control" id="cvc" placeholder="örn. 123" maxlength="3" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-secondary w-100 py-3">Onayla</button>
+            </form>   
+
+            <!-- Onay Mesajı -->
+            <div class="thank-you-message text-center d-none flex-column align-items-center mt-5">
+              <img src="images/icon-complete.svg" alt="Complete Icon" class="mb-4" style="width: 80px;">
+              <h2 class="mb-3">Thank you!</h2>
+              <p class="mb-4">We've added your card details</p>
+              <button class="btn btn-secondary px-4 py-2 " id="continueButton">Continue</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

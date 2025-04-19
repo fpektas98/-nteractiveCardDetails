@@ -1,0 +1,269 @@
+body {
+    overflow: hidden;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.split-container {
+    height: 100vh;
+    position: relative;
+}
+
+.right-side {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.left-side {
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+/* Kartlar */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card-front {
+    top: 25%;
+    left: 60%;
+    z-index: 10;
+}
+
+.card-back {
+    top: 28%;
+    left: 88%;
+    z-index: 5;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-logo {
+    width: 80px;
+    margin-bottom: auto;
+}
+
+.card-number {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    margin: 1.5rem 0;
+    left: 18px;
+    position: relative;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.card-cvc {
+    position: absolute;
+    top: 44%;
+    right: 3rem;
+    font-size: 1rem;
+}
+
+/* Form */
+.credit-card-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.credit-card-form label {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #220930;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    border: 1px solid #dfdee0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: #6358a5;
+    outline: none;
+    box-shadow: 0 0 0 1px #6358a5;
+}
+
+.btn-secondary {
+    background-color: #220930;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #220930;
+}
+
+/* Teşekkür Mesajı */
+.thank-you-message {
+    text-align: center;
+}
+
+.thank-you-message h2 {
+    letter-spacing: 2px;
+    margin: 1rem 0;
+}
+
+.thank-you-message p {
+    color: #8f8694;
+    margin-bottom: 2rem;
+}
+
+#continueButton {
+    width: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .split-container {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .left-side {
+        height: 250px;
+        background-image: url(images/bg-main-desktop.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .right-side {
+        margin-top: 0;
+        padding: 1.5rem;
+        align-items: flex-start;
+        flex-grow: 1;
+    }
+
+    .card-front,
+    .card-back {
+        width: 300px;
+    }
+
+    .card-back {
+        top: -52%;
+        left: 55%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    .card-front {
+        top: 51%;
+        left: 45%;
+        transform: translateX(-50%);
+        z-index: 20;
+    }
+
+    .card-logo {
+        width: 60px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .card-number {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 30px;
+        left: 25px;
+    }
+
+    .card-details {
+        font-size: 0.8rem;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-cvc {
+        font-size: 0.9rem;
+        right: 2.5rem;
+    }
+
+    .credit-card-form,
+    .thank-you-message {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .card-front,
+    .card-back {
+        width: 280px;
+    }
+
+    .card-back {
+        top: 5%;
+    }
+
+    .card-front {
+        top: 45%;
+    }
+
+    .card-number {
+        font-size: 1rem;
+    }
+
+    .card-details {
+        font-size: 0.7rem;
+    }
+
+    .card-cvc {
+        font-size: 0.8rem;
+    }
+}

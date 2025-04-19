@@ -26,7 +26,7 @@ This project is based on the Interactive Card Details Form challenge provided by
 ## To run this project locally
 1. Clone the repository:
  ```bash
-    https://github.com/fpektas98/interactiveCardDetails.git
+ https://github.com/fpektas98/interactiveCardDetails.git
 ```
 2. Navigate to the project folder:
 ```bash

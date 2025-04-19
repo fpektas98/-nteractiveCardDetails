@@ -1,1 +1,1 @@
-# -nteractiveCardDetails
+# interactiveCardDetails
